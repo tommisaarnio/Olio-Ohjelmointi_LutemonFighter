@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".FragmentTraining">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_lutemons"
+        android:layout_width="374dp"
+        android:layout_height="226dp"
+        android:layout_marginTop="20dp"
+        android:background="#EAEAEA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homeMoveLutemon"
+        android:layout_width="158dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="5dp"
+        android:onClick="moveLutemon"
+        android:text="Siirrä valitut Lutemonit"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgHome" />
+
+    <Button
+        android:id="@+id/btnGym"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Salille!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeMoveLutemon" />
+
+    <Button
+        android:id="@+id/btnJog"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="Lenkille!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeMoveLutemon" />
+
+    <RadioGroup
+        android:id="@+id/rgHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_lutemons">
+
+        <RadioButton
+            android:id="@+id/radioBtnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="Kotiin" />
+
+        <RadioButton
+            android:id="@+id/radioBtnTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Treenaamaan" />
+
+        <RadioButton
+            android:id="@+id/radioBtnFightning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taistelemaan" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
