@@ -92,7 +92,7 @@ public class Storage {
 
     public void saveLutemon(Context context) {
         try {
-            ObjectOutputStream lutemonWriter = new ObjectOutputStream(context.openFileOutput("vittuuu.data", Context.MODE_PRIVATE));
+            ObjectOutputStream lutemonWriter = new ObjectOutputStream(context.openFileOutput("lutemon.data", Context.MODE_PRIVATE));
             lutemonWriter.writeObject(lutemons);
             lutemonWriter.close();
         }   catch (IOException e){
@@ -102,7 +102,7 @@ public class Storage {
 
     public void loadLutemon(Context context){
         try {
-            ObjectInputStream userReader = new ObjectInputStream(context.openFileInput("vittuuu.data"));
+            ObjectInputStream userReader = new ObjectInputStream(context.openFileInput("lutemon.data"));
             lutemons = (ArrayList<Lutemon>) userReader.readObject();
             userReader.close();
         }   catch (IOException e){
